@@ -1,0 +1,123 @@
+.serviceList {
+  padding: 1rem;
+  
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  .card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    &:focus-within {
+      box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+    }
+  }
+  
+  .cardContent {
+    padding: 1.25rem;
+  }
+  
+  .category {
+    display: inline-block;
+    background: #f0f7ff;
+    color: #0066cc;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  
+  .name {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    color: #222;
+    line-height: 1.4;
+  }
+  
+  .description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    min-height: 4rem;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  
+  .price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0066cc;
+  }
+  
+  .addButton {
+    background: #0066cc;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    outline: none;
+    
+    &:hover {
+      background: #0052a3;
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3);
+    }
+    
+    &:focus {
+      background: #0052a3;
+      box-shadow: 
+        0 0 0 3px rgba(0, 102, 204, 0.3),
+        0 2px 8px rgba(0, 102, 204, 0.3);
+    }
+    
+    &:active {
+      background: #004080;
+      transform: translateY(0);
+      box-shadow: 0 1px 4px rgba(0, 102, 204, 0.3);
+    }
+    
+    &:disabled {
+      background: #cccccc;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+  }
+}
