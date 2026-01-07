@@ -1,73 +1,34 @@
-# React + TypeScript + Vite
+# Сервис выбора услуг с интерактивной корзиной
+React-приложение для выбора и оформления IT-услуг с использованием современного стека технологий.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Для просмотра перейдите по ссылке:
+https://services-app-sigma.vercel.app/
 
-Currently, two official plugins are available:
+## 🎯 Основные возможности
+* Каталог из 30 IT-услуг (разработка, дизайн, маркетинг, контент)
+* Интерактивная корзина в виде модального окна
+* Управление заказом: добавление/удаление, изменение количества
+* Автоматический расчет общей суммы
+* Адаптивный интерфейс (mobile-first подход)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Технологический стек
+* React 18 с TypeScript
+* Redux Toolkit для управления состоянием
+* SCSS Modules для стилизации
+* Functional Components с хуками
+* Адаптивная верстка (от мобильных до десктопов)
 
-## React Compiler
+## 🚀 Особенности реализации
+* Модальная корзина с иконкой-индикатором количества
+* Полная типизация всех компонентов и данных
+* Оптимизированная структура кода и состояний
+* Доступность (a11y): ARIA-атрибуты, управление с клавиатуры
+* Плавные анимации и микроинтеракции
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📱 Адаптивность
+* Mobile-first подход
+* 3 вида раскладки (1→2→3 колонки услуг)
+* Мобильная корзина с удобным управлением
+* Интерактивные состояния для всех устройств
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Проект демонстрирует полный цикл разработки современного React-приложения с корзиной покупок, от архитектуры до реализации всех UX-аспектов.
